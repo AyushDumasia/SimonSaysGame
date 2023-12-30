@@ -1,0 +1,114 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Times New Roman', Times, serif;
+} 
+body{
+    text-align: center;
+    background-color: black;
+    overflow: hidden;
+    color: white;
+
+}
+
+h1{
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+h3{
+    font-size: 3rem;
+}
+
+span{
+    cursor: pointer;
+
+}
+
+.btn-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 10px auto;
+    width: 30rem;
+    height: 30rem;
+    align-items: center;
+}
+
+.btn{
+    cursor: pointer;
+    text-align: center;
+    height: 40%;
+    width: 35%;
+    border-radius: 20%;
+    border: 5px solid white;
+}
+.red{
+    background-color: rgb(193, 60, 60);
+}
+
+.yellow{
+    background-color: yellow;
+}
+
+.purple{
+    background-color: purple;
+}
+
+.green{
+    background-color: green;
+}
+
+.gameflash{
+    background-color: antiquewhite;
+}
+
+.userflash{
+    background-color:rgb(168, 46, 66);
+    box-shadow: 10px 10px 10px rgb(65, 83, 117);
+}
+
+
+.lightMode{
+    background-color: white;
+    color: black;
+}
+.darkMode{
+    border:2px solid black;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 250, 250);
+}
+
+.lightIcon{
+    display: none;
+}
+.darkIcon{
+    display: none;
+}
+
+.gameOver{
+    background-color : red;
+}
+
+
+@media screen and (min-width : 300px) and (max-width : 576px) {
+
+    .container{
+        display: block;
+        margin: auto;
+    }
+    h3{
+        text-align: center;
+        font-size: 2em;
+    }
+    .btn-container{
+        width: 70%;
+        height: 28rem;
+    }
+    .btn{
+        display: flex;
+        width: 40%;
+        gap: 10px;
+        justify-content: end;
+        height: 40%;
+    }
+}

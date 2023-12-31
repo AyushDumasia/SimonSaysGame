@@ -17,7 +17,6 @@ function startEvent(){
 }
 
 document.addEventListener("keypress",startEvent);
-document.addEventListener("click",startEvent);
 
 //Flash by Compiler
 function gameflash(btn){
@@ -56,7 +55,9 @@ function levelUp(){
     let ranbtn = document.querySelector(`.${ranColor}`);
     gameSeq.push(ranColor);
     console.log(gameSeq);
-    gameflash(ranbtn);
+    setTimeout(function(){
+        gameflash(ranbtn);
+    },300);
 }
 
 //For Storing Value of User Pressed

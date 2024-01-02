@@ -108,32 +108,15 @@ function gameReset(){
 }
 
 //DarkLightMode
-let mode = false;
-let lightMode = document.querySelector(".lightIcon");
+let mode = document.querySelector(".modes");
+mode.addEventListener("click",function(){
+    document.body.classList.toggle("darkMode");
+    if(document.body.classList.contains("darkMode")){
+        mode.src = "dark theme icon/moon.png";
+    }
+    else{
+        mode.src = "dark theme icon/sun.png";
+    }
+})
+
 let body = document.querySelector("body");
-let modes = document.querySelector(".modes");
-let darkMode = document.querySelector(".darkIcon");
-
-lightMode.addEventListener("click",function(){
-    if(mode == false){
-        mode = true;
-        body.classList.remove("darkMode");
-        body.classList.add("lightMode");
-        modes.classList.add("lightMode");
-        modes.classList.remove("lightMode");
-        lightMode.style.display = "none";
-        darkMode.style.display = "inline-block";
-    }
-});
-
-darkMode.addEventListener("click",function(){
-    if(mode == true){
-        mode = false;
-        body.classList.add("darkMode");
-        body.classList.remove("lightMode");
-        modes.classList.add("lightMode");
-        modes.classList.remove("lightMode");
-        darkMode.style.display = "none";
-        lightMode.style.display = "inline-block";
-    }
-});

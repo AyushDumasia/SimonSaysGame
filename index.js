@@ -120,3 +120,32 @@ mode.addEventListener("click",function(){
 })
 
 let body = document.querySelector("body");
+
+let bulb = document.querySelector(".bulb");
+
+bulb.addEventListener("click",function(){
+    hint();
+})
+
+let f = 0;
+function hint(){
+    let delay = 0;
+    if(f < 3 && level != 0){
+        for(let i = 0 ; i < gameSeq.length ; i++){
+            let color = gameSeq[i];
+            let btn = document.querySelector(`.${color}`);
+            setTimeout(function () {
+                gameflash(btn);
+            }, delay);
+            delay += 500;
+        }
+        f++;
+        console.log(f);
+    }
+    else if (level === 0){
+        alert("Start a game");
+    }
+    else if (f >= 3){
+        alert("You use every hint");
+    }
+}

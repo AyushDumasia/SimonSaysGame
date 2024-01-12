@@ -119,30 +119,3 @@ mode.addEventListener("click", function () {
 });
 
 let body = document.querySelector("body");
-
-let hint = document.querySelector(".hint");
-
-let f = 1;
-
-hint.addEventListener("click", function () {
-  if (f) {
-    alert(
-      "You have only one hint, If you want to use it click on Hint button!"
-    );
-    f = 0;
-  } else {
-    hint.style.display = "none";
-
-    let delay = 0;
-    for (let i = 0; i < gameSeq.length; i++) {
-      let color = gameSeq[i];
-      let btn = document.querySelector(`.${color}`);
-
-      setTimeout(function () {
-        gameflash(btn);
-      }, delay);
-
-      delay += 500;
-    }
-  }
-});

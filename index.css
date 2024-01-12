@@ -32,7 +32,6 @@ body{
     background-color: var(--primary-color);
     overflow: hidden;
     color: var(--secondary-color);
-
 }
 
 h1{
@@ -146,6 +145,7 @@ span{
         justify-content: end;
         height: 36%;
     }
+
     .bulb{
         font-size: 20px;
         color: yellow;

@@ -110,7 +110,9 @@ span{
     font-size: 30px;
     color: yellow;
 }
-
+.game-start{
+    display: none;
+}
 
 @media screen and (min-width : 300px) and (max-width : 576px) {
     h1{
@@ -149,5 +151,15 @@ span{
     .bulb{
         font-size: 20px;
         color: yellow;
+    }
+    .game-start{
+        display: block;
+        margin:10px auto;
+        height: 2rem;
+        width: 100px;
+        border-radius : 5px;
+        background-color: var(--secondary-color);
+        color: var(--primary-color);
+        border: none;
     }
 }

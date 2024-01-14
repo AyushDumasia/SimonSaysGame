@@ -15,9 +15,10 @@ function startEvent(){
         levelUp();
     }
 }
+let gameStartBtn = document.querySelector(".game-start");
 
 document.addEventListener("keypress", startEvent);
-document.addEventListener("touchstart", startEvent);
+gameStartBtn.addEventListener("click", startEvent);
 
 
 //Flash by Compiler

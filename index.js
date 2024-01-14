@@ -8,33 +8,35 @@ let started = false;
 let level = 0;
 
 //For Game Start
-function startEvent() {
+function startEvent(){
     h3 = document.querySelector("h3");
-    if (started == false) {
-    started = true;
-    levelUp();
+    if(started == false){
+        started = true;
+        levelUp();
     }
 }
 
 document.addEventListener("keypress", startEvent);
+document.addEventListener("touchstart", startEvent);
+
 
 //Flash by Compiler
-function gameflash(btn) {
+function gameflash(btn){
     btn.classList.add("gameflash");
-    setTimeout(function () {
+    setTimeout(function (){
     btn.classList.remove("gameflash");
     }, 300);
 }
 
 //Flash by User
-function userflash(btn) {
+function userflash(btn){
     btn.classList.add("userflash");
     setTimeout(function () {
         btn.classList.remove("userflash");
     }, 100);
 }
 //For Wrong Answer
-function Dangerflash() {
+function Dangerflash(){
     body.classList.add("gameOver");
     setTimeout(function () {
         body.classList.remove("gameOver");
@@ -42,7 +44,7 @@ function Dangerflash() {
 }
 
 //For Level Up
-function levelUp() {
+function levelUp(){
     userSeq = [];
     level++;
     h3.innerText = `Level ${level}`;
@@ -58,7 +60,7 @@ function levelUp() {
 }
 
 //For Storing Value of User Pressed
-function btnPress() {
+function btnPress(){
     let btn = this;
     userflash(btn);
 
@@ -109,18 +111,14 @@ let mode = document.querySelector(".modes");
 mode.addEventListener("click", function () {
     document.body.classList.toggle("darkMode");
     if (document.body.classList.contains("darkMode")) {
-    mode.src = "dark theme icon/moon.png";
-    hint.style.color = "white";
-    hint.style.backgroundColor = "#808080";
-} else {
-    mode.src = "dark theme icon/sun.png";
-    hint.style.color = "black";
-    hint.style.backgroundColor = "white";
-}
+        mode.src = "dark theme icon/moon.png";
+    }
+    else{
+        mode.src = "dark theme icon/sun.png";
+    }
 });
 
 let body = document.querySelector("body");
-
 let bulb = document.querySelector(".bulb");
 
 bulb.addEventListener("click",function(){

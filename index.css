@@ -92,8 +92,7 @@ span{
 }
 
 .userflash{
-    background-color:rgb(168, 46, 66);
-    box-shadow: 10px 10px 10px rgb(65, 83, 117);
+    background-color:rgb(0, 0, 0);
 }
 
 .gameOver{
@@ -126,13 +125,14 @@ span{
         margin: auto;
     }
     h3{
+        margin: 10px 0px 10px 0px;
         text-align: center;
         font-size: 1.5rem;
     }
     .btn-container{
-        width: 70%;
-        height: 28rem;
-        padding: 10px;
+        width: 80%;
+        height: 22rem;
+        /* padding: 10px; */
     }
     .modes{
         width: 20px;

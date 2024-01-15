@@ -5,12 +5,12 @@
 } 
 
 :root {
-    --primary-color : black;
-    --secondary-color : white;
+    --primary-color : #242424;
+    --secondary-color : #EEF5FF;
 }
 .darkMode{
-    --primary-color: white;
-    --secondary-color: black;
+    --primary-color: #EEF5FF;
+    --secondary-color: #242424;
 }
 
 .modes{

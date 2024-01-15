@@ -148,3 +148,33 @@ function hint(){
         alert("You use every hint");
     }
 }
+
+
+//Reset button
+let reset = document.querySelector(".refresh");
+reset.addEventListener("click",function(){
+    gameSeq = [];
+    userSeq = [];
+    started = false;
+    level = 0;
+    f = 0;
+    if(window.innerWidth <= 500){
+        heading.innerText = ``;
+    }
+    else if(window.innerWidth > 500){
+        heading.innerText = `Press Any Key to Start`;
+    }
+})
+
+let heading = document.querySelector("h3");
+function changeHeading(){
+    if(window.innerWidth <= 500){
+        heading.innerText = ``;
+    }
+    else if(window.innerWidth > 500){
+        heading.innerText = `Press Any Key to Start`;
+    }
+}
+
+changeHeading();
+window.addEventListener('resize', changeHeading);
